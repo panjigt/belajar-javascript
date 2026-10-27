@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+<style>
+body {
+    font-family: Arial;
+    background: #eeeeee;
+    text-align: center;
+    padding-top: 50px;
+}
+.login {
+    background: white;
+    width: 280px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+input {
+    width: 90%;
+     padding: 8px;
+    margin: 8px 0;
+}   
+
+button {
+    padding: 10px;
+    width: 100%;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+    <div class="login">
+    <h2>Login</h2>
+    <input type="text" id="username"
+    placeholder="Masukkan username">
+    <input type="password" id="password"
+    placeholder="Masukkan password">
+    <button onclick="login()">Masuk</button>
+    <p id="pesan"></p>
+</div>
+<script>
+    function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+    if (user === "panji" && pass === "12345") {
+    document.getElementById("pesan").innerHTML =
+    "Login berhasil!";
+} else {
+    document.getElementById("pesan").innerHTML =
+    "Username atau password salah!";
+}
+}
+</script>
+</body>
+</html>
